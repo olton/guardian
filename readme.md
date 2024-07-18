@@ -9,7 +9,7 @@ npm i @olton/guardian
 
 ### Using
 ```javascript
-import {parse, string, createSchema} from "@olton/guardian"
+import {parse, string, required, email, createSchema} from "@olton/guardian"
 
 const schema = string()
 let value = parse(schema, "123")
