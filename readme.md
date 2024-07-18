@@ -9,7 +9,7 @@ npm i @olton/guardian
 
 ### Using
 ```javascript
-import {parse, string, required, email, createSchema} from "@olton/guardian"
+import {parse, string, required, email, object} from "@olton/guardian"
 
 const schema = string()
 let value = parse(schema, "123")
@@ -29,17 +29,22 @@ if (value.ok) {
     console.log(value.output)
 }
 
-let objSchema = createSchema({
+let schema = object({
     name: pipe(required("Name Required"), string()),
     email: pipe(string(), email("Please enter a valid email address"))
 })
 
-const res1 = parse(objSchema, {
+const res0 = parse(schema, {
+    name: "Vasya Pupkin",
+    email: "vasya@pupkin.com"
+}) // -> Ok
+
+const res1 = parse(schema, {
     name: "",
     email: "vasya@pupkin.com"
 }) // -> Error "Name Required"
 
-const res2 = parse(objSchema, {
+const res2 = parse(schema, {
     name: "Serhii Pimenov",
     email: "vasya_pupkin.com"
 }) // -> Error "Please enter a valid email address"

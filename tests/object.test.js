@@ -1,8 +1,8 @@
 import {expect, test} from "vitest";
-import {createSchema, email, parse, pipe, required, string} from "../src/index.js";
+import {object, email, parse, pipe, required, string} from "../src/index.js";
 
 test('Create schema success', () => {
-    const schema = createSchema({
+    const schema = object({
         name: string(),
         email: pipe(string(), email())
     })
@@ -10,7 +10,7 @@ test('Create schema success', () => {
 })
 
 test('Create schema false', () => {
-    const schema = createSchema({
+    const schema = object({
         name: string(),
         email: pipe(string(), email())
     })
@@ -18,7 +18,7 @@ test('Create schema false', () => {
 })
 
 test('Create schema fail', () => {
-    const schema = createSchema({
+    const schema = object({
         name: pipe(string()),
         email: pipe(string(), email())
     })
@@ -26,7 +26,7 @@ test('Create schema fail', () => {
 })
 
 test('Create schema fail', () => {
-    const schema = createSchema({
+    const schema = object({
         name: string(),
         email: pipe(string(), email("Enter a valid email address"))
     })
@@ -34,7 +34,7 @@ test('Create schema fail', () => {
 })
 
 test('Create schema fail', () => {
-    const schema = createSchema({
+    const schema = object({
         name: pipe(required("Name required"), string()),
         email: pipe(string(), email())
     })

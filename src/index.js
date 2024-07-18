@@ -1,4 +1,3 @@
-import createSchema from "./schema"
 import {parse, safeParse} from "./parser"
 import pipe from "./pipe"
 import compose from "./compose"
@@ -17,10 +16,9 @@ import maxValue from "./guardians/max-value.js"
 import email from "./guardians/email.js"
 import required from "./guardians/required.js"
 import number from "./guardians/number.js"
-import object from "./guardians/object.js"
+import object from "./object"
 
 export {
-    createSchema,
     parse,
     safeParse,
     pipe,

@@ -38,11 +38,23 @@ export default [
                 banner,
                 name: 'Guard',
                 plugins: [
-                    terser({
+                    production && terser({
                         keep_classnames: true,
                         keep_fnames: true,
                     })
                 ]
+            },
+            {
+                file: './dist/guardian.esm.js',
+                format: 'esm',
+                banner,
+                sourcemap: false,
+            },
+            {
+                file: './dist/guardian.cjs.js',
+                format: 'cjs',
+                banner,
+                sourcemap: false,
             },
         ]
     },
