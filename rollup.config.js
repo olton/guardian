@@ -36,7 +36,7 @@ export default [
                 format: 'iife',
                 sourcemap,
                 banner,
-                name: 'Guard',
+                name: 'G',
                 plugins: [
                     production && terser({
                         keep_classnames: true,
