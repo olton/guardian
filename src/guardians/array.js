@@ -14,20 +14,20 @@ export default (guard, errorMessage = GUARD_ARRAY_MESSAGE) => {
         guard = string()
     }
 
-    return function(val){
-        const msg = errorMessage.replace(/VAL/g, val).replace(/TYPE/g, guard.name)
+    return function(input){
+        const msg = errorMessage.replace(/VAL/g, input).replace(/TYPE/g, guard.name)
 
-        if (!Array.isArray(val)) {
-            return new GuardianError( msg, "array", val )
+        if (!Array.isArray(input)) {
+            return new GuardianError( msg, "array", input )
         }
 
-        for (let v of val) {
+        for (let v of input) {
             const result = guard(v)
             if (result instanceof GuardianError) {
-                return new GuardianError( msg, "array", val )
+                return new GuardianError( msg, "array", input )
             }
         }
 
-        return val
+        return input
     }
 }

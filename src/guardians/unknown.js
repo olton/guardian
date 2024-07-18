@@ -1,5 +1,5 @@
 export default () => {
-    return function(val){
-        return val
+    return function(input){
+        return input
     }
 }
