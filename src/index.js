@@ -1,3 +1,4 @@
+import createSchema from "./schema"
 import {parse, safeParse} from "./parser"
 import pipe from "./pipe"
 import compose from "./compose"
@@ -19,6 +20,7 @@ import number from "./guardians/number.js"
 import object from "./guardians/object.js"
 
 export {
+    createSchema,
     parse,
     safeParse,
     pipe,

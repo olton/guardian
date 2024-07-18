@@ -9,7 +9,7 @@ npm i @olton/guardian
 
 ### Using
 ```javascript
-import {parse, string} from "@olton/guardian"
+import {parse, string, createSchema} from "@olton/guardian"
 
 const schema = string()
 let value = parse(schema, "123")
@@ -28,4 +28,21 @@ let value = safeParse(schema, "123") // -> return obj with data
 if (value.ok) {
     console.log(value.output)
 }
+
+let objSchema = createSchema({
+    name: pipe(required("Name Required"), string()),
+    email: pipe(string(), email("Please enter a valid email address"))
+})
+
+const res1 = parse(objSchema, {
+    name: "",
+    email: "vasya@pupkin.com"
+}) // -> Error "Name Required"
+
+const res2 = parse(objSchema, {
+    name: "Serhii Pimenov",
+    email: "vasya_pupkin.com"
+}) // -> Error "Please enter a valid email address"
+
+
 ```

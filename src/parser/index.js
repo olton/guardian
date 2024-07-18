@@ -25,10 +25,13 @@ const parse = (schema, data) => {
             const value = data[key]
             const guard = schema[key]
 
-            if (!guard) {continue}
+            if (!guard) throw new GuardianError(`Guard not defined for field ${key} in input data!`, "general", data)
+            if (!data.hasOwnProperty(key)) throw new GuardianError(`Field ${key} doesn't exists in input data!`, "general", data)
 
             if (typeof guard === "function") {
-                result = guard.apply(null, [data])
+                console.log(guard.name)
+                result = guard.apply(null, [value])
+
                 if (result instanceof GuardianError) {
                     throw result
                 }
