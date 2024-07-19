@@ -8,7 +8,7 @@ export default (pattern, errorMessage = GUARD_PATTERN_MESSAGE) => {
         const regexp = typeof pattern === "string" ? new RegExp(pattern, 'g') : pattern
         const check = regexp.test(""+input)
         if (!check) {
-            return new GuardianError( msg,"domain", input )
+            return new GuardianError( msg,"pattern", input )
         }
         return input
     }

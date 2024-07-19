@@ -7,7 +7,7 @@ export default (length, errorMessage = GUARD_BYTES_MESSAGE) => {
         const msg = errorMessage.replace(/VAL/g, input)
         const check = typeof input === "string" && new TextEncoder().encode(input).length === length
         if (!check) {
-            return new GuardianError( msg,"string", input )
+            return new GuardianError( msg,"bytes", input )
         }
         return input
     }
