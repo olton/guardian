@@ -2,8 +2,8 @@ import {parse, safeParse} from "./parser"
 import pipe from "./pipe"
 import compose from "./compose"
 import string from "./guardians/string.js"
-import startsWith from "./guardians/startsWith.js"
-import endsWith from "./guardians/endsWith.js"
+import startsWith from "./guardians/starts-with.js"
+import endsWith from "./guardians/ends-with.js"
 import unknown from "./guardians/unknown.js"
 import symbol from "./guardians/symbol.js"
 import bigint from "./guardians/bigint.js"
@@ -27,7 +27,8 @@ import imei from "./guardians/imei.js"
 import {length, maxLength, minLength} from "./guardians/length.js"
 import {ip, ipv4, ipv6} from "./guardians/ip.js"
 import domain from "./guardians/domain.js"
-import url from "./guardians/url.js";
+import url from "./guardians/url.js"
+import hexColor from "./guardians/hex-color.js";
 
 export {
     parse, safeParse,
@@ -59,4 +60,5 @@ export {
     ip, ipv4, ipv6,
     domain,
     url,
+    hexColor,
 }
