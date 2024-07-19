@@ -1,6 +1,14 @@
-# Guardian
+<h1 align="center">Guardian</h1>
 
-Data guard and validation library
+<p align="center">
+    <img src="./assets/guardian.svg" style="height: 200px;"/>
+</p>
+
+<p align="center">
+Data guard and validation library.
+Validate user input with Guardian.
+</p>
+
 
 ### Install
 ```shell
