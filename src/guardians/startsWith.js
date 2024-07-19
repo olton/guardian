@@ -3,6 +3,8 @@ import {GuardianError} from "../error";
 const GUARD_STARTS_WITH_MESSAGE = 'VAL must starts with START_VAL'
 
 export default (startValue, errorMessage = GUARD_STARTS_WITH_MESSAGE) => {
+    if (typeof startValue === "undefined" || startValue === null) throw new Error(`START_VALUE not defined!`)
+
     return function(input){
         const msg = errorMessage.replace(/VAL/g, input).replace(/START_VAL/g, startValue)
         const check = typeof input === "string" && input.startsWith(startValue)

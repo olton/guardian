@@ -17,6 +17,7 @@ import email from "./guardians/email.js"
 import required from "./guardians/required.js"
 import number from "./guardians/number.js"
 import object from "./object"
+import between from "./guardians/between.js";
 
 export {
     parse,
@@ -39,4 +40,5 @@ export {
     required,
     number,
     object,
+    between,
 }
