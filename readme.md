@@ -51,3 +51,50 @@ const res2 = parse(schema, {
 
 
 ```
+
+### Pipes
+- [x] pipe
+- [x] compose
+
+```javascript
+import {pipe, string, email} from "@olton/guardian"
+
+const scheme1 = pipe(string(), email()) // left to right
+const scheme2 = compose(email(), string()) // right to left
+```
+
+### Guardians
+- [x] array
+- [x] base64
+- [x] between
+- [x] bigint
+- [x] boolean
+- [x] bytes
+- [x] creditCard (visa, mastercard, discover, jbc, diners, unionPay, americanExpress)
+- [x] date
+- [x] domain
+- [x] email
+- [x] empty
+- [x] endsWith
+- [x] finite
+- [x] func
+- [x] hexColor
+- [x] imei
+- [x] instance
+- [x] integer
+- [x] ip (ipv4, ipv6)
+- [x] length
+- [x] maxValue
+- [x] minValue
+- [x] notNull
+- [x] notNumber
+- [x] number
+- [x] pattern
+- [x] promise
+- [x] required
+- [x] safeInteger
+- [x] startsWith
+- [x] string
+- [x] symbol
+- [x] unknown
+- [x] url
