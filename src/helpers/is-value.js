@@ -1,0 +1,1 @@
+export default (val) => typeof val !== 'undefined' && val !== null
