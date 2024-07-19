@@ -26,6 +26,8 @@ import array from "./guardians/array.js"
 import imei from "./guardians/imei.js"
 import {length, maxLength, minLength} from "./guardians/length.js"
 import {ip, ipv4, ipv6} from "./guardians/ip.js"
+import domain from "./guardians/domain.js"
+import url from "./guardians/url.js";
 
 export {
     parse, safeParse,
@@ -55,4 +57,6 @@ export {
     imei,
     length, minLength, maxLength,
     ip, ipv4, ipv6,
+    domain,
+    url,
 }
