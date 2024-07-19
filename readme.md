@@ -71,6 +71,33 @@ const scheme1 = pipe(string(), email()) // left to right
 const scheme2 = compose(email(), string()) // right to left
 ```
 
+### Create simple schema
+```javascript
+import {parse, object, visa, mastercard, string, email} from "@olton/guardian"
+
+const schema1 = string()
+const data1 = parse(schema1, "123")
+
+const schema2 = pipe(required(), email())
+const data2 = parse(schema2, "vasya@pupkin.com")
+```
+
+### Create complex schema
+```javascript
+import {parse, object, visa, mastercard, string, email} from "@olton/guardian"
+
+const schema = object({
+    name: string(),
+    email: email(),
+    cards: object({
+        visa: visa(),
+        mastercard: mastercard()
+    })
+})
+
+const data = parse(schema, {...})
+```
+
 ### Guardians
 - [x] array
 - [x] base64
