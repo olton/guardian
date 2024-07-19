@@ -29,7 +29,8 @@ import {ip, ipv4, ipv6} from "./guardians/ip.js"
 import domain from "./guardians/domain.js"
 import url from "./guardians/url.js"
 import hexColor from "./guardians/hex-color.js"
-import {creditCard, americanExpress, mastercard, visa, discovery} from "./guardians/credit-card.js"
+import {creditCard, americanExpress, mastercard, visa, discover, jcb, unionPay, diners} from "./guardians/credit-card.js"
+import bytes from "./guardians/bytes.js";
 
 export {
     parse, safeParse,
@@ -62,5 +63,6 @@ export {
     domain,
     url,
     hexColor,
-    creditCard, visa, discovery, mastercard, americanExpress,
+    creditCard, visa, discover, mastercard, americanExpress, jcb, unionPay, diners,
+    bytes,
 }
