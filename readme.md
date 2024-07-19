@@ -60,9 +60,14 @@ const res2 = parse(schema, {
 
 ```
 
+### Parsing
+- [x] parse - Throw error when invalid data
+- [x] safeParse - Return special object with .output when all ok, and .error when invalid data
+
+
 ### Pipes
-- [x] pipe
-- [x] compose
+- [x] pipe - run guarders left to right
+- [x] compose - run guarders right to left
 
 ```javascript
 import {pipe, string, email} from "@olton/guardian"
