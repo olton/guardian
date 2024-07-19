@@ -10,7 +10,7 @@ export default (minValue, errorMessage = GUARD_MIN_VALUE_MESSAGE) => {
         const given = +input
         const check = !isNaN(given) && given >= minValue
         if (!check) {
-            return new GuardianError( msg,"min-value", input )
+            return new GuardianError( msg,"minValue", input )
         }
         return input
     }

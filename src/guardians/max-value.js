@@ -10,7 +10,7 @@ export default (maxValue, errorMessage = GUARD_MAX_VALUE_MESSAGE) => {
         const given = +input
         const check = !isNaN(given) && given <= maxValue
         if (!check) {
-            return new GuardianError( msg,"max-value", input )
+            return new GuardianError( msg,"maxValue", input )
         }
         return input
     }

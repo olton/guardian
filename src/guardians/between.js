@@ -10,7 +10,7 @@ export default (minValue, maxValue, errorMessage = GUARD_BETWEEN_MESSAGE) => {
         const msg = errorMessage.replace(/VAL/g, input).replace(/MIN_VAL/g, minValue).replace(/MAX_VAL/g, maxValue)
         const check = typeof input === "number" && (input >= minValue && input <= maxValue)
         if (!check) {
-            return new GuardianError( msg,"string", input )
+            return new GuardianError( msg,"between", input )
         }
         return input
     }
