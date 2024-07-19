@@ -21,14 +21,15 @@ import between from "./guardians/between.js"
 import finite from "./guardians/finite.js"
 import base64 from "./guardians/base64.js"
 import notNumber from "./guardians/not-number.js"
-import boolean from "./guardians/boolean.js";
-import array from "./guardians/array.js";
+import boolean from "./guardians/boolean.js"
+import array from "./guardians/array.js"
+import imei from "./guardians/imei.js"
+import {length, maxLength, minLength} from "./guardians/length.js"
+import {ip, ipv4, ipv6} from "./guardians/ip.js"
 
 export {
-    parse,
-    safeParse,
-    pipe,
-    compose,
+    parse, safeParse,
+    pipe, compose,
     string,
     startsWith,
     endsWith,
@@ -51,4 +52,7 @@ export {
     notNumber,
     boolean,
     array,
+    imei,
+    length, minLength, maxLength,
+    ip, ipv4, ipv6,
 }

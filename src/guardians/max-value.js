@@ -9,7 +9,7 @@ export default (maxValue, errorMessage = GUARD_MAX_VALUE_MESSAGE) => {
     return function (input) {
         const msg = errorMessage.replace(/VAL/g, input).replace(/MAX_VALUE/g, maxValue)
         const given = +input
-        const check = !isNaN(given) && given <= maxValue
+        const check = !isNaN(given) && given <= +maxValue
         if (!check) {
             return new GuardianError( msg,"maxValue", input )
         }
