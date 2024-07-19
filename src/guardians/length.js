@@ -7,7 +7,7 @@ export const length =  (length, errorMessage = GUARD_LENGTH_MESSAGE) => {
         const msg = errorMessage.replace(/VAL/g, input).replace(/N/g, length)
         const check = (typeof input === "string" || Array.isArray(input)) && input.length === length
         if (!check) {
-            return new GuardianError( msg,"string", input )
+            return new GuardianError( msg,"length", input )
         }
         return input
     }
@@ -18,7 +18,7 @@ export const minLength =  (length, errorMessage = GUARD_LENGTH_MESSAGE) => {
         const msg = errorMessage.replace(/VAL/g, input).replace(/N/g, length)
         const check = (typeof input === "string" || Array.isArray(input)) && input.length >= length
         if (!check) {
-            return new GuardianError( msg,"string", input )
+            return new GuardianError( msg,"minLength", input )
         }
         return input
     }
@@ -29,7 +29,7 @@ export const maxLength =  (length, errorMessage = GUARD_LENGTH_MESSAGE) => {
         const msg = errorMessage.replace(/VAL/g, input).replace(/N/g, length)
         const check = (typeof input === "string" || Array.isArray(input)) && input.length <= length
         if (!check) {
-            return new GuardianError( msg,"string", input )
+            return new GuardianError( msg,"maxLength", input )
         }
         return input
     }

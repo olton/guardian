@@ -7,7 +7,7 @@ export default (errorMessage = GUARD_NOT_NUMBER_MESSAGE) => {
         const msg = errorMessage.replace(/VAL/g, input)
         const check = isNaN(input)
         if (!check) {
-            return new GuardianError( msg,"not-number", input )
+            return new GuardianError( msg,"notNumber", input )
         }
         return input
     }
