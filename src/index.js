@@ -21,7 +21,6 @@ import between from "./guardians/between.js"
 import finite from "./guardians/finite.js"
 import base64 from "./guardians/base64.js"
 import notNumber from "./guardians/not-number.js"
-import formatedDate from "./guardians/formated-date.js"
 import boolean from "./guardians/boolean.js";
 import array from "./guardians/array.js";
 
@@ -50,7 +49,6 @@ export {
     finite,
     base64,
     notNumber,
-    formatedDate,
     boolean,
     array,
 }
