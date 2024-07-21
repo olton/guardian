@@ -5,7 +5,7 @@ const GUARD_IPv4_MESSAGE = 'VAL must be a valid ipv4 address'
 const GUARD_IPv6_MESSAGE = 'VAL must be a valid ipv6 address'
 
 const regexpIpv4 = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
-const regexpIpv6 = /^[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}\:[a-fA-F0-9]{1, 4}$/
+const regexpIpv6 = /^[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}:[a-fA-F0-9]{1, 4}$/
 
 export const ip = (errorMessage = GUARD_IP_MESSAGE) => {
     return function (input) {

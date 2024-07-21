@@ -76,7 +76,7 @@ const scheme1 = pipe(string(), email()) // left to right
 const scheme2 = compose(email(), string()) // right to left
 ```
 
-### Create simple schema
+### Create a simple schema
 ```javascript
 import {parse, object, visa, mastercard, string, email} from "@olton/guardian"
 
