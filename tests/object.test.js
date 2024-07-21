@@ -1,6 +1,10 @@
 import {expect, test} from "vitest";
 import {object, email, parse, pipe, required, string} from "../src/index.js";
 
+test('Create schema error', () => {
+    expect( () => object("123") ).toThrowError(/must be an object/)
+})
+
 test('Create schema success', () => {
     const schema = object({
         name: string(),

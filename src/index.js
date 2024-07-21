@@ -16,7 +16,7 @@ import maxValue from "./guardians/max-value.js"
 import email from "./guardians/email.js"
 import required from "./guardians/required.js"
 import number from "./guardians/number.js"
-import object from "./object"
+import object from "./guardians/object.js"
 import between from "./guardians/between.js"
 import finite from "./guardians/finite.js"
 import base64 from "./guardians/base64.js"
@@ -32,8 +32,10 @@ import hexColor from "./guardians/hex-color.js"
 import {creditCard, americanExpress, mastercard, visa, discover, jcb, unionPay, diners} from "./guardians/credit-card.js"
 import bytes from "./guardians/bytes.js"
 import notNull from "./guardians/not-null.js";
+import info from "./info.js"
 
 export {
+    info,
     parse, safeParse,
     pipe, compose,
     string,

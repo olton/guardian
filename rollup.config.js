@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import terser from '@rollup/plugin-terser'
 import {nodeResolve} from '@rollup/plugin-node-resolve'
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,6 +21,13 @@ const banner = `
  * Build time: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
  */
 `
+
+let txt
+
+txt = fs.readFileSync(`src/info.js`, 'utf8')
+txt = txt.replace(/version = ".+"/g, `version = "${pkg.version}"`)
+txt = txt.replace(/build_time = ".+"/g, `build_time = "${new Date().toLocaleString()}"`)
+fs.writeFileSync(`src/info.js`, txt, { encoding: 'utf8', flag: 'w+' })
 
 export default [
     {
