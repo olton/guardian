@@ -32,6 +32,8 @@ import hexColor from "./guardians/hex-color.js"
 import {creditCard, americanExpress, mastercard, visa, discover, jcb, unionPay, diners} from "./guardians/credit-card.js"
 import bytes from "./guardians/bytes.js"
 import notNull from "./guardians/not-null.js";
+import pattern from "./guardians/pattern.js"
+import digits from "./guardians/digits.js"
 import info from "./info.js"
 
 export {
@@ -69,4 +71,6 @@ export {
     creditCard, visa, discover, mastercard, americanExpress, jcb, unionPay, diners,
     bytes,
     notNull,
+    pattern,
+    digits,
 }
