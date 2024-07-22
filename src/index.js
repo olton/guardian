@@ -34,6 +34,7 @@ import bytes from "./guardians/bytes.js"
 import notNull from "./guardians/not-null.js";
 import pattern from "./guardians/pattern.js"
 import digits from "./guardians/digits.js"
+import float from "./guardians/float.js";
 import info from "./info.js"
 
 export {
@@ -73,4 +74,5 @@ export {
     notNull,
     pattern,
     digits,
+    float,
 }

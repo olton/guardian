@@ -112,11 +112,13 @@ const data = parse(schema, {...})
 - [x] bytes
 - [x] creditCard (visa, mastercard, discover, jbc, diners, unionPay, americanExpress)
 - [x] date
+- [x] digits
 - [x] domain
 - [x] email
 - [x] empty
 - [x] endsWith
 - [x] finite
+- [x] float
 - [x] func
 - [x] hexColor
 - [x] imei
