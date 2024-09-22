@@ -1,4 +1,4 @@
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 import { fileURLToPath } from 'url';
 import path from 'path';
 import terser from '@rollup/plugin-terser'
