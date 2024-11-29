@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_NOT_NUMBER_MESSAGE = 'VAL can`t be a number'
 

@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 import string from "./string.js";
 
 const GUARD_ARRAY_MESSAGE = 'VAL must be an array of TYPE'

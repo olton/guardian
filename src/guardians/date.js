@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_DATE_MESSAGE = 'VAL must be valid date object or date string'
 

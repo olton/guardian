@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 import isValue from "../helpers/is-value.js";
 
 const GUARD_STARTS_WITH_MESSAGE = 'VAL must starts with START_VAL'

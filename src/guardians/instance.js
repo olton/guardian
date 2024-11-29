@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_INSTANCE_MESSAGE = 'VAL must be an instance of'
 

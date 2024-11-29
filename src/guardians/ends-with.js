@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 import isValue from "../helpers/is-value.js";
 
 const GUARD_ENDS_WITH_MESSAGE = 'VAL must end with END_VAL'

@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_IP_MESSAGE = 'VAL must be a valid ip address ipv4 or ipv6'
 const GUARD_IPv4_MESSAGE = 'VAL must be a valid ipv4 address'

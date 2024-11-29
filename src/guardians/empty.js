@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_EMPTY_MESSAGE = 'VAL must be an empty string or array with length 0'
 

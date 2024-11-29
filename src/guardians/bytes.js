@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_BYTES_MESSAGE = 'The length of string must be VAL bytes'
 

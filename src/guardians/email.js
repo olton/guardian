@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_EMAIL_MESSAGE = 'VAL must be a string in valid email format'
 

@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_DIGITS_MESSAGE = 'VAL must contains only digits'
 

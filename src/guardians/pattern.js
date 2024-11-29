@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_PATTERN_MESSAGE = 'The value must match the pattern'
 

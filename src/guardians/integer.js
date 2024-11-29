@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_INTEGER_MESSAGE = 'VAL must be an integer'
 

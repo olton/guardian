@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 import isValue from "../helpers/is-value.js";
 
 const GUARD_NOT_NULL_MESSAGE = 'VAL can`t be null or undefined.';

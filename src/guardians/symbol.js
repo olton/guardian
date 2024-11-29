@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_SYMBOL_MESSAGE = 'A symbol is required'
 

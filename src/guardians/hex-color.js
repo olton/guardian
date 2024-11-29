@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_HEX_COLOR_MESSAGE = 'VAL must be a valid hex color'
 

@@ -1,6 +1,6 @@
-import {parse, safeParse} from "./parser"
-import pipe from "./pipe"
-import compose from "./compose"
+import {parse, safeParse} from "./parser/index.js"
+import pipe from "./pipe/index.js"
+import compose from "./compose/index.js"
 import string from "./guardians/string.js"
 import startsWith from "./guardians/starts-with.js"
 import endsWith from "./guardians/ends-with.js"
@@ -35,7 +35,7 @@ import notNull from "./guardians/not-null.js";
 import pattern from "./guardians/pattern.js"
 import digits from "./guardians/digits.js"
 import float from "./guardians/float.js";
-import info from "./info.js"
+import info from "./info/info.js"
 
 export {
     info,

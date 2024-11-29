@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 import isValue from "../helpers/is-value.js";
 
 const GUARD_MIN_VALUE_MESSAGE = 'VAL must be a great then MIN_VALUE'

@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 
 const GUARD_DOMAIN_MESSAGE = 'VAL must be a valid domain name, xn--* for internationalized names'
 

@@ -1,4 +1,4 @@
-import {GuardianError} from "../error";
+import {GuardianError} from "../error/index.js";
 import isValue from "../helpers/is-value.js";
 
 const GUARD_BETWEEN_MESSAGE = 'VAL must be between MIN_VAL and MAX_VAL';
