@@ -1,4 +1,4 @@
-import {build} from "esbuild"
+import {build, context} from "esbuild"
 import progress from "@olton/esbuild-plugin-progress"
 import { replace } from "esbuild-plugin-replace";
 import pkg from "./package.json" assert {type: "json"};
@@ -26,44 +26,42 @@ const options = {
     banner: {
         js: banner
     },
+    plugins: [
+        progress(),
+        replace({
+            '__BUILD_TIME__': new Date().toLocaleString(),
+            '__VERSION__': version,
+        })
+    ],
 }
 
-await build({
-    ...options,
-    outfile: "./dist/guardian.mjs",
-    plugins: [
-        progress(),
-        replace({
-            '__BUILD_TIME__': new Date().toLocaleString(),
-            '__VERSION__': version,
-        })
-    ],
-    format: "esm"
-})
+if (production) {
+    await build({
+        ...options,
+        outfile: "./dist/guardian.js",
+        format: "esm"
+    })
 
-await build({
-    ...options,
-    outfile: "./dist/guardian.cjs",
-    plugins: [
-        progress(),
-        replace({
-            '__BUILD_TIME__': new Date().toLocaleString(),
-            '__VERSION__': version,
-        })
-    ],
-    format: "cjs"
-})
+    await build({
+        ...options,
+        outfile: "./lib/guardian.js",
+        format: "iife",
+        globalName: "G"
+    })
+} else {
+    const ctxEsm = await context({
+        ...options,
+        outfile: "./dist/guardian.js",
+        format: "esm"
+    })
+    
+    const ctxIife = await context({
+        ...options,
+        outfile: "./lib/guardian.js",
+        format: "iife",
+        globalName: "G"
+    })
+    
+    await Promise.all([ctxEsm.watch(), ctxIife.watch()])
+}
 
-await build({
-    ...options,
-    outfile: "./lib/guardian.js",
-    plugins: [
-        progress(),
-        replace({
-            '__BUILD_TIME__': new Date().toLocaleString(),
-            '__VERSION__': version,
-        })
-    ],
-    format: "iife",
-    globalName: "G"
-})
