@@ -28,7 +28,7 @@ import {length, maxLength, minLength} from "./guardians/length.js"
 import {ip, ipv4, ipv6} from "./guardians/ip.js"
 import domain from "./guardians/domain.js"
 import url from "./guardians/url.js"
-import hexColor from "./guardians/hex-color.js"
+import {hexColor, rgbColor, hslColor, default as color} from "./guardians/color.js"
 import {creditCard, americanExpress, mastercard, visa, discover, jcb, unionPay, diners} from "./guardians/credit-card.js"
 import bytes from "./guardians/bytes.js"
 import notNull from "./guardians/not-null.js";
@@ -70,7 +70,7 @@ export {
     ip, ipv4, ipv6,
     domain,
     url,
-    hexColor,
+    color, hexColor, rgbColor, hslColor,
     creditCard, visa, discover, mastercard, americanExpress, jcb, unionPay, diners,
     bytes,
     notNull,
