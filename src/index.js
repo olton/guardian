@@ -11,8 +11,8 @@ import date from "./guardians/date.js"
 import func from "./guardians/function.js"
 import integer from "./guardians/integer.js"
 import safeInteger from "./guardians/safe-integer.js"
-import minValue from "./guardians/min-value.js"
-import maxValue from "./guardians/max-value.js"
+import min from "./guardians/min-value.js"
+import max from "./guardians/max-value.js"
 import email from "./guardians/email.js"
 import required from "./guardians/required.js"
 import number from "./guardians/number.js"
@@ -37,6 +37,10 @@ import digits from "./guardians/digits.js"
 import float from "./guardians/float.js";
 import contains from "./guardians/contains.js";
 import type from "./guardians/type.js"
+import equal from "./guardians/equal.js";
+import similar from "./guardians/similar.js";
+import great from "./guardians/great.js";
+import less from "./guardians/less.js";
 import info from "./info/info.js"
 
 export {
@@ -53,8 +57,8 @@ export {
     func,
     integer,
     safeInteger,
-    minValue,
-    maxValue,
+    min,
+    max,
     email,
     required,
     number,
@@ -79,4 +83,8 @@ export {
     float,
     contains,
     type,
+    equal,
+    similar,
+    great,
+    less,
 }
