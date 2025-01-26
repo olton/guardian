@@ -41,6 +41,8 @@ import equal from "./guardians/equal.js";
 import similar from "./guardians/similar.js";
 import great from "./guardians/great.js";
 import less from "./guardians/less.js";
+import greatOrEqual from "./guardians/greatOrEqual.js";
+import lessOrEqual from "./guardians/lessOrEqual.js";
 import info from "./info/info.js"
 
 export {
@@ -87,4 +89,6 @@ export {
     similar,
     great,
     less,
+    greatOrEqual,
+    lessOrEqual,
 }
