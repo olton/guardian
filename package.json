@@ -1,7 +1,7 @@
 {
   "name": "@olton/guardian",
-  "version": "0.5.2",
-  "main": "dist/guardian.esm.js",
+  "version": "0.6.0",
+  "main": "dist/guardian.js",
   "type": "module",
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
@@ -30,11 +30,9 @@
   "devDependencies": {
     "@olton/easytest": "^0.39.0",
     "@olton/esbuild-plugin-progress": "^0.3.0",
+    "esbuild-plugin-replace": "^1.4.0",
     "cross-env": "^7.0.3",
     "esbuild": "^0.24.0",
     "shx": "^0.3.4"
-  },
-  "dependencies": {
-    "esbuild-plugin-replace": "^1.4.0"
   }
 }

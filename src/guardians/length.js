@@ -6,7 +6,6 @@ export const length =  (length, errorMessage = GUARD_LENGTH_MESSAGE) => {
     return function (input) {
         const msg = errorMessage.replace(/VAL/g, input).replace(/N/g, length)
         const check = (typeof input === "string" || Array.isArray(input)) && input.length === +length
-        console.log(input.length, length)
         if (!check) {
             return new GuardianError( msg,"length", input )
         }

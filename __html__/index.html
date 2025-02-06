@@ -5,9 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-  <script src="../lib/guardian.js"></script>
-  <script>
-    console.log(G)
-  </script>
+<script src="../lib/guardian.js"></script>
+<script>
+    function getType(obj) {
+        return Object.prototype.toString.call(obj).replace(/^\[object (.+)]$/, '$1').toLowerCase();
+    }
+
+    console.log(getType(1));
+    console.log(getType("111"));
+    console.log(getType([]));
+    console.log(getType({}));
+    console.log(getType(null));
+    console.log(getType(undefined));
+    console.log(getType(new Date()));
+    console.log(getType(()=>{}));
+    console.log(getType(function(){}));
+    console.log(getType(false));
+</script>
 </body>
 </html>
