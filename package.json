@@ -1,6 +1,6 @@
 {
   "name": "@olton/guardian",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "main": "dist/guardian.js",
   "type": "module",
   "scripts": {
@@ -10,10 +10,6 @@
     "watch": "cross-env MODE=development node watch.js",
     "test": "easytest --verbose",
     "pub": "npm publish --access public"
-  },
-  "exports": {
-    "import": "./dist/guardian.mjs",
-    "require": "./dist/guardian.cjs"
   },
   "files": [
     "dist"
