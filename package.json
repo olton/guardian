@@ -1,6 +1,6 @@
 {
   "name": "@olton/guardian",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "main": "dist/guardian.js",
   "type": "module",
   "scripts": {
