@@ -1,18 +1,21 @@
 {
   "name": "@olton/guardian",
-  "version": "0.7.1",
+  "description": "Data validation library",
+  "version": "0.7.2",
   "main": "dist/guardian.js",
   "type": "module",
+  "types": "types/guardian.d.ts",
   "scripts": {
     "prebuild": "shx rm -rf dist/* lib/*",
     "build": "cross-env MODE=production node build.js",
     "dev": "cross-env MODE=development node build.js",
     "watch": "cross-env MODE=development node watch.js",
-    "test": "easytest --verbose",
-    "pub": "npm publish --access public"
+    "test": "latte --verbose",
+    "pub": "npm run build && npm publish --access public"
   },
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "keywords": [
     "guard",
@@ -24,11 +27,11 @@
   "license": "MIT",
   "description": "Data validator",
   "devDependencies": {
-    "@olton/easytest": "^0.39.0",
     "@olton/esbuild-plugin-progress": "^0.3.0",
-    "esbuild-plugin-replace": "^1.4.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.24.0",
-    "shx": "^0.3.4"
+    "esbuild": "^0.25.3",
+    "esbuild-plugin-replace": "^1.4.0",
+    "shx": "^0.4.0",
+    "@olton/latte": "^0.13.0"
   }
 }
